@@ -9,6 +9,7 @@ capybara-*.html
 /public/system
 /coverage/
 /spec/tmp
+__pycache__
 **.orig
 rerun.txt
 pickle-email-*.html
