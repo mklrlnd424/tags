@@ -6,6 +6,8 @@
 
 # Student Handout - Session 1
 
+# DON'T DO THIS RIGHT NOW - IT'S BEING REWORKED 
+
 ## Agenda
 1. Intro & Setting Up Your Environment
 1. Basic Linux & Shell
