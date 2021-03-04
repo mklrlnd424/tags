@@ -8,7 +8,7 @@ We will learn git's data model, consisting of three objects.  We will learn git'
 
 ## Prerequisites
 
-Review [Prework](prework-and-references) for Session 1.
+Review [Prework](prework-session-1) for Session 1.
 
 ### Goals
 
@@ -53,13 +53,15 @@ See [Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects){:tar
 
 ## Three Trees
 
-The word "reset" is loaded with so many connotations that it is nearly meaningless.  For the purposes of this session, you can read "reset" as "bring-into-alignment-with-a-commit".  We'll explore how this works for managing local changes.
+The word "reset" is loaded with so many connotations that it is nearly meaningless.  For the purposes of this session, you can read "reset" as "set-current-branch-to-a-commit".  We'll explore how this works for managing local changes.
 
 See [Reset Demystified](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified){:target="_blank"}.
 
-- HEAD (or something that will become HEAD).
-- Index
-- Workspace
+These are the three trees:
+
+- HEAD - pointer to the current branch, which points to a commit
+- Index - the place you add to; the staging area for commits
+- Workspace - the files checked out on disk (not including the git repo itself - that would be too meta)
 
 <hr>
 You can follow along in the [Session 1 Student Handout](session-1-handout).

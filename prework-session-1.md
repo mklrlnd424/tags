@@ -49,19 +49,22 @@ When ready to continue, type ```quit```.
 
 ### Another side note - looking at the Sqlite data directly
 
-Where does your Sqlite database live?  If you want to browse your DB outside of Flask/peewee, just install Sqlite.  On a Mac, this would be
+If you want to browse your DB outside of Flask/peewee, just install Sqlite.  On a Mac, this would be
 ```
 brew install sqlite
 ```
-Then, fire up sqlite3 and start running queries.  In sqlite, commands other than SQL queries are prefixed with ".", e.g. ".help".  To exit, ".q", and so on.
+Where does your Sqlite database live?  [HINT: The path to the database file is part of the config that the webapp loads.]
+
+Fire up sqlite3 and start running queries.  In sqlite, commands other than SQL queries are prefixed with ".", e.g. ".help".  To exit, ".q", and so on.
 ```
+$ sqlite3 <path-to-sqlite3-database-file>
 sqlite> .headers on
 sqlite> .mode column
 sqlite> select * from tag;
 ```
 
 ## How does everything start up?
-To finish off this prework, look at ```bin/run-flask-webserver.sh```.  Notice how it inits the virtual environment (yet another use of 'environment'!  But this usage is actually closer to the 'environment variable' sense of the word; the 'activate' and 'deactivate' commands add and remove actual environment variables.  Test this by running the 'env' command inside and outside the virtualenv state.  Look especially closely at the values of VIRTUALENV and PATH in each case.  What are the implications of the PATH change?)
+To finish off this prework, look at ```bin/run-flask-webserver.sh```.  Notice how it inits the virtual environment (Digression: yet another use of 'environment'!  But this usage is actually closer to the 'environment variable' sense of the word; the 'activate' and 'deactivate' commands add and remove actual environment variables.  Test this by running the 'env' command inside and outside the virtualenv state.  Look especially closely at the values of VIRTUALENV and PATH in each case.  What are the implications of the PATH change?)
 
 Anyway, back to startup.  The shell script calls main.py, which brings in a couple variables from ```app```, messes with the PATH so that it can find the Tag model and the views, and then inits the DB if needed and runs the app.
 
@@ -73,3 +76,8 @@ If you have time, also take a look at ```views.py``` and look at how routes are 
 - What code saves a tag to the database?  What would straight SQL look like (i.e., no ORM)?
 - Can you think of any structural improvements that could be made to this view?
 
+Now that's done; we can proceed with [Session 1](session-1-handout).  The git skills we'll pick up are summarized in the [Syllabus](syllabus-session-1).
+
+
+## Bonus prework - explore some [Unix/Shell Concepts](unix-shell-concepts)
+I'll cover these *very* briefly in class, but please, feel free to google around on your own.
