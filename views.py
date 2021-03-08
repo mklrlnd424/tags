@@ -1,15 +1,12 @@
-from flask import request, redirect
+from flask import request, redirect, render_template, g
 from datetime import datetime
 from app import app
 from tag import Tag
 
 @app.route('/', methods=['GET'])
 def show_tags():
-    tags = Tag.select()
-    tags_html = '\n'.join(list(map(lambda x: x.name + "<br>", tags)))
-    form_html = "<form action=\"/tags\" method=\"POST\"><label>Enter a tag: </label><input name=\"tag-name\"></form>"
-    #embed()
-    return "<h1>The Ultimate Tag Manager</h1><h1>Hello World!</h1><img src=\"%s\" style=\"width:300px\"><div>%s</div><div>%s</div>" % (app.config['config']['awesome_image'],tags_html, form_html)
+    g.setdefault('image', app.config['config']['awesome_image']) # Flask.g: a way to pass var to a template
+    return render_template('index.html', tags=Tag.select())
 
 @app.route('/tags', methods=['POST'])
 def add_tag():
