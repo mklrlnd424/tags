@@ -16,4 +16,4 @@ This is the "air you breathe" when working on a computer running any variant of 
 * Environment Variables
 * The PATH environment variable
 * Standard Input (aka STDIN), Standard Output (STDOUT), Standard Error (STDERR)
-* Pipes (the vertical bar, '|') and I/O Redirection (e.g., '<', '>', '<<', '>>', '2>&1')
+* Pipes (that is, the vertical bar, '\|') and I/O Redirection (e.g., '<', '>', '\<\<', '\>\>', '2>&1')
