@@ -17,7 +17,7 @@
 Start with the forked-and-cloned repo.  See the [Prework](prework-session-1) for fork & clone instructions.
 
 ## Basic Unix & Shell
-Review [Basic Unix and Shell](basic-unix-commands).
+Review [Basic Unix and Shell](unix-shell-concepts).
 
 ### Unpack the git objects that Github.com has packed
 ```
